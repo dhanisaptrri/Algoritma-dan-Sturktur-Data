@@ -20,7 +20,7 @@ public class P1_Pemilihan {
         System.out.print("Masukan Nilai UAS :");
         nilaiUAS = sc.nextInt();
 
-        System.out.println("====================");
+        System.out.println("         *****           ");
 
         double nilaiAkhir = (0.2 * nilaiTugas) + (0.2 * nilaiKuis) + (0.3 * nilaiUTS) + (0.4 * nilaiUAS);
 
@@ -30,27 +30,29 @@ public class P1_Pemilihan {
 
         if (nilaiAkhir > 80 && nilaiAkhir <= 100) {
             System.out.println("Nilai Huruf : A");
-            System.out.println("Selamat Anda LULUS");
+            System.out.println("**********Selamat Anda LULUS**********");
         } else if (nilaiAkhir > 73 && nilaiAkhir <= 80) {
             System.out.println("Nilai Huruf : B+");
-            System.out.println("Selamat Anda LULUS");
+            System.out.println("**********Selamat Anda LULUS**********");
         } else if (nilaiAkhir > 65 && nilaiAkhir <= 73) {
             System.out.println("Nilai Huruf: B");
-            System.out.println("Selamat Anda LULUS");
+            System.out.println("**********Selamat Anda LULUS**********");
         } else if (nilaiAkhir > 60 && nilaiAkhir <= 65) {
             System.out.println("Nilai Huruf: C+");
-            System.out.println("Selamat Anda LULUS");
+            System.out.println("**********Selamat Anda LULUS**********");
         } else if (nilaiAkhir > 50 && nilaiAkhir <= 60) {
             System.out.println("Nilai Huruf: C");
-            System.out.println("Selamat Anda LULUS");
+            System.out.println("**********Selamat Anda LULUS**********");
         } else if (nilaiAkhir > 39 && nilaiAkhir <= 50) {
             System.out.println("Nilai Huruf: D");
-            System.out.println("Anda TIDAK LULUS");
+            System.out.println("**********nda TIDAK LULUS**********");
         } else if (nilaiAkhir <= 39) {
             System.out.println("Nilai Huruf: E");
-            System.out.println("Selamat  Anda TIDAK LULUS");
+            System.out.println("**********Selamat Anda TIDAK LULUS**********");
         } else {
-            System.out.println("Nilai tidak Valid");
+            System.out.println("**********Nilai tidak Valid**********");
         }
+
+        sc.close();
     }
 }
