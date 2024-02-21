@@ -13,7 +13,11 @@ public class Buku07 {
     }
 
     void terjual(int jml) {
-        stok -= jml;
+        if (stok >= jml) {
+            stok -= jml;
+        } else {
+            throw new IllegalStateException("Mohon maaf stok buku sedang tidak tersedia");
+        }
     }
 
     void restock(int jml) {
@@ -22,5 +26,9 @@ public class Buku07 {
 
     void gantiHarga(int hrg) {
         harga = hrg;
+    }
+
+    public static void main(String [] args) {
+
     }
 }
