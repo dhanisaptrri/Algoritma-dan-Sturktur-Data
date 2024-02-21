@@ -28,7 +28,4 @@ public class Buku07 {
         harga = hrg;
     }
 
-    public static void main(String [] args) {
-
-    }
 }
