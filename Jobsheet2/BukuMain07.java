@@ -20,5 +20,10 @@ public class BukuMain07 {
         Buku07 bukuShaca = new Buku07("Cara Menjadi Anak Baik", "Shasaca", 1000, 2, 5000000);
         bukuShaca.terjual(2);
         bukuShaca.tampilInformasi();
+        bukuShaca.hitungHargaTotal(2);
+        bukuShaca.hitungDiskon();
+        bukuShaca.hitungHargaBayar();
+
+
     }
 }

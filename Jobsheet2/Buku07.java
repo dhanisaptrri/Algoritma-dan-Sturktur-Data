@@ -1,7 +1,8 @@
 public class Buku07 {
 
     String judul, pengarang;
-    int halaman, stok, harga;
+    int halaman, stok, harga, totalHarga;
+    double diskon;
 
     void tampilInformasi() {
 
@@ -26,6 +27,27 @@ public class Buku07 {
 
     void gantiHarga(int hrg) {
         harga = hrg;
+    }
+
+    void hitungHargaTotal(int jml) {
+        totalHarga = harga * jml;
+        System.out.println("harga total belanja : " + totalHarga);
+    }
+
+    void hitungDiskon() {
+        if (totalHarga > 150000) {
+            diskon = totalHarga * 0.12;
+        } else if (totalHarga >= 75000 && totalHarga <= 150000) {
+            diskon = totalHarga * 0.5;
+        } else {
+            diskon = 0;
+        }
+        System.out.println("harga diskon : " + diskon);
+    }
+
+    void hitungHargaBayar() {
+        totalHarga -= diskon;
+        System.out.println("harga yang harus dibayar : " + totalHarga);
     }
 
     public Buku07() {
