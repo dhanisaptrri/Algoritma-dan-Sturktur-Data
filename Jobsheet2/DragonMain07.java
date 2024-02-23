@@ -12,10 +12,7 @@ public class DragonMain07 {
         pemain.printPosition();
         pemain.moveUp();
         pemain.printPosition();
-        pemain.moveLeft();
-        pemain.printPosition();
-        pemain.moveDown();
-        pemain.printPosition();
+        
     }
     
 }
