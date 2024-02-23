@@ -16,5 +16,9 @@ public class BukuMain07 {
         Buku07 bk2 = new Buku07("Self Reward", "Maheera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        Buku07 bukuShaca = new Buku07("Cara Menjadi Anak Baik", "Shasaca", 1000, 2, 5000000);
+        bukuShaca.terjual(2);
+        bukuShaca.tampilInformasi();
     }
 }
