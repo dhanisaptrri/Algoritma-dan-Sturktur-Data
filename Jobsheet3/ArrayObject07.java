@@ -4,28 +4,24 @@ public class ArrayObject07 {
 
     public static void main(String [] args) {
         Scanner sc = new Scanner(System.in);
-        PersegiPanjang07[] ppArray = new PersegiPanjang07[3];
-       
+        System.out.print("Masukkan banyak Persegi Panjang: ");
+        int perPanj = sc.nextInt();
 
-        for(int i = 0; i < 3; i++) {
+        PersegiPanjang07[] ppArray = new PersegiPanjang07[perPanj];
 
-            ppArray[i] = new PersegiPanjang07();
-            System.out.println("Persegi Panjang ke-" + i);
-            System.out.print("Masukan panjang : ");
-            ppArray[i].panjang = sc.nextInt();
-            System.out.print("Masukan lebar :");
-            ppArray[i].lebar = sc.nextInt();
+    for (int i = 0; i < perPanj; i++) {
+        ppArray[i] = new PersegiPanjang07();
+        System.out.println("Persegi Panjang ke -" + i);
+        System.out.print("Masukkan panjang: ");
+        ppArray[i].panjang = sc.nextInt();
+        System.out.print("Masukkan lebar: ");
+        ppArray[i].lebar = sc.nextInt();
+    }
 
-        }
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Persegi Panjang ke-" + i);
-            System.out.println("Panjang: "+ ppArray[i].panjang+", lebar: "+ppArray[i].lebar);
-        }
-
-        PersegiPanjang07[] pgArray = new PersegiPanjang07[100];
-        pgArray[5] = new PersegiPanjang07();
-        pgArray[5].sisi = 20;
+    for (int i = 0; i < perPanj; i++) {
+        System.out.println("Persegi Panjang ke -" + i);
+        System.out.println("Panjang: " + ppArray[i].panjang + ", lebar: " + ppArray[i].lebar);
+    }
 
         //ppArray[0] = new PersegiPanjang07();
         //ppArray[0].panjang = 110;
