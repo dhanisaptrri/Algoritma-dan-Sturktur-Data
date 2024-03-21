@@ -28,9 +28,9 @@ public class main {
         list.selectionSort();
         list.tampil();
 
-        //System.out.println("Data Mahasiswa Setelah Sorting ASC Berdasarkan IPK");
-        //list.insertionSort();
-        //list.tampil();
+        System.out.println("Data Mahasiswa Setelah Sorting ASC Berdasarkan IPK");
+        list.insertionSort();
+        list.tampil();
     }
     
 }
