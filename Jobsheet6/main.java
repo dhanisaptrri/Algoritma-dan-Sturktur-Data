@@ -24,6 +24,10 @@ public class main {
         list.bubbleShort();
         list.tampil();
 
+        System.out.println("Data Mahasiswa Setelah Sorting ASC Berdasarkan IPK");
+        list.slectionSort();
+        list.tampil();
+
     }
     
 }
