@@ -1,31 +1,42 @@
-import java.net.Socket;
 import java.util.Scanner;
 
 public class mainSum {
-
-    public static void main(String [] args) {
-
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("=========================================================");
+        System.out.println("Program menghitung keuntungan total(satuan JUTA. Misal 5.9)");
+        System.out.print("Masukkan jumlah perusahaan: ");
+        int company = sc.nextInt();
+        sc.nextLine();
 
-        System.out.println("===============================================");
-        System.out.println("Program Menghitung Keuntungan Total (Satuan Juta, Mulai 5,9)");
-        System.out.print("Masukan Jumlah Bulan : ");
-        int elm = sc.nextInt();
+        Sum[] sm = new Sum[company];
 
-        Sum sm = new Sum(elm);
-        System.out.println("===============================================");
-        for(int i = 0; i < sm.elemen; i++){
-            System.out.print("Masukan Untung Bulan ke- " + (i + 1) + " : ");
-            sm.keuntungan[i] = sc.nextDouble();
+        for (int i = 0; i < company; i++) {
+            System.out.println("=========================================================");
+            System.out.print("Masukkan jumlah bulan perusahaan " + (i + 1) + " : ");
+            int bulan = sc.nextInt();
+            sc.nextLine();
+            sm[i] = new Sum(bulan, company);
+            sm[i].perusahaan = bulan;
+            System.out.println("=========================================================");
+            for (int j = 0; j < bulan; j++) {
+                System.out.print("Masukkan untung bulan ke " + (j + 1) + " : ");
+                sm[i].keuntungan[j] = sc.nextDouble();
+                sc.nextLine();
+            }
         }
 
-        System.out.println("===============================================");
         System.out.println("ALGORITMA BRUTE FORCE");
-        System.out.println("Total Keuntungan Perusahaan Selama " + sm.elemen + " Bulan Adalah " + sm.totalBF(sm.keuntungan));
-        System.out.println("===============================================");
+        for(int i = 0; i < company; i++){
+        System.out.println("Total Keuntungan Perusahaan " + (i + 1) +  " Selama " + sm[i].elemen + " Bulan Adalah " + sm[i].totalBF(sm[i].keuntungan));
+        System.out.println();
+        }
+
+        for(int i = 0; i < company; i++){
         System.out.println("ALGORITMA DIVIDE AND CONQUER");
-        System.out.println("Total Keuntungan Perusahaan Selama " + sm.elemen + " Bulan Adalah " + sm.totalDC(sm.keuntungan, 0, sm.elemen - 1));
+        System.out.println("Total Keuntungan Perusahaan " + (i + 1) + " Selama " + sm[i].elemen + " Bulan Adalah " + sm[i].totalDC(sm[i].keuntungan, 0, sm[i].elemen - 1));
+        System.out.println();
+        }
         
     }
-    
 }

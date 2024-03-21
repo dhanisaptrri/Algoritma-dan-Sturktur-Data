@@ -3,11 +3,13 @@ public class Sum {
     int elemen;
     double keuntungan[];
     double total;
+    int perusahaan;
 
-    Sum(int elemen) {
+    Sum(int elemen, int perusahaan) {
         this.elemen = elemen;
         this.keuntungan = new double[elemen];
         this.total = 0;
+        this.perusahaan = perusahaan;
     }
 
     double totalBF(double arr[]) {
