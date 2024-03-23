@@ -9,11 +9,11 @@ public class mainHotel {
 
         HotelService list = new HotelService();
 
-        Hotel htl1 = new Hotel("MAWAR", "Saranjana", 150000, (byte)2);
-        Hotel htl2 = new Hotel("JINGGA", "Saranjana", 500000, (byte)4);
-        Hotel htl3 = new Hotel("REMANG", "Saranjana", 400000, (byte)5);
-        Hotel htl4 = new Hotel("BIRU", "Saranjana", 1000000, (byte)3);
-        Hotel htl5 = new Hotel("KAKTUS", "Saranjana", 350000, (byte)4);
+        Hotel htl1 = new Hotel("MAWAR", "Saranjana", 150000, (byte) 2);
+        Hotel htl2 = new Hotel("JINGGA", "Saranjana", 500000, (byte) 4);
+        Hotel htl3 = new Hotel("REMANG", "Saranjana", 400000, (byte) 5);
+        Hotel htl4 = new Hotel("BIRU", "Saranjana", 1000000, (byte) 3);
+        Hotel htl5 = new Hotel("KAKTUS", "Saranjana", 350000, (byte) 4);
 
         list.tambah(htl1);
         list.tambah(htl2);
@@ -24,7 +24,7 @@ public class mainHotel {
         int memilih;
         do{
             System.out.println("+----------------------------------+");
-            System.out.println("| SELAMAT DATAN DI MATAHARI TRAVEL |");
+            System.out.println("| SELAMAT DATANG DI MATAHARI TRAVEL |");
             System.out.println("+----------------------------------+");
             System.out.println();
             System.out.println("1. Hotel Terdekat");

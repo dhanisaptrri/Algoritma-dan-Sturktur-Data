@@ -19,6 +19,6 @@ public class Hotel07 {
         System.out.println("HOTEL " + nama);
         System.out.println("Kota " + kota);
         System.out.println(" Harga : " + harga);
-        System.out.println("Ranting " + bintang);
+        System.out.println("Ranting Bintang     " + bintang);
     }
 }
