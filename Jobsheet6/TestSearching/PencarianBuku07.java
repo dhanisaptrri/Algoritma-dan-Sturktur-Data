@@ -11,7 +11,7 @@ public class PencarianBuku07 {
             listBK[idx] = m;
             idx++;
         } else {
-            System.out.println("DATA SUDAH PENUH!!!");
+            System.out.println("full");
         }
     }
 
@@ -80,16 +80,16 @@ public class PencarianBuku07 {
         return -1;
     }
 
-    public int StrFindBukuBinary(String cari, int l, int r) {
+    public int binaryCariBuku(String cari, int l, int r) {
         int m;
         if (r >= l) {
             m = (l + r) / 2;
             if (cari.compareToIgnoreCase(listBK[m].judulBuku) == 0) {
                 return m;
             } else if (cari.compareToIgnoreCase(listBK[m].judulBuku) < 0) {
-                return StrFindBukuBinary(cari, l, m - 1);
+                return binaryCariBuku(cari, l, m - 1);
             } else {
-                return StrFindBukuBinary(cari, m + 1, r);
+                return binaryCariBuku(cari, m + 1, r);
             }
         }
         return -1;
@@ -107,7 +107,7 @@ public class PencarianBuku07 {
         }
     }
 
-    void StrInsertionSortJudulAsc() {
+    void binaryCariJudul() {
         for (int i = 1; i < listBK.length; i++) {
             Buku07 temp = listBK[i];
             int j = i;
@@ -119,4 +119,15 @@ public class PencarianBuku07 {
         }
     }
 
+    public int judulSama(String cari) {
+        int hitung = 0;
+        for (int i = 0; i < listBK.length; i++) {
+            if (listBK[i].judulBuku != null && listBK[i].judulBuku.equalsIgnoreCase(cari)) {
+                hitung++;
+            }
+        }
+        return hitung;
+    }
+
+    
 }
