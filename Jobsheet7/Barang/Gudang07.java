@@ -74,7 +74,7 @@ public class Gudang07 {
 
     public String koncersiDesimalKeBiner(int kode) {
         StackKonversi stack = new StackKonversi();
-        while (kode > 0) {
+        while (kode != 0) {
             int sisa = kode % 2;
             stack.push(sisa);
             kode = kode /2;
