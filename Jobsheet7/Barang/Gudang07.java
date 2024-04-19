@@ -87,4 +87,26 @@ public class Gudang07 {
         return biner;
     }
 
+    public Barang07 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang07 barangterbawah = tumpukan[0];
+            System.out.println("Barang terbawah : " + barangterbawah.nama);
+            return barangterbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+
+    public Barang07 cariBarang(String kodeBarang) {
+        for (int i = 0; i <= top; i++) {
+            if (tumpukan[i].kode == Integer.parseInt(kodeBarang)) {
+                return tumpukan[i];
+            }
+            if (tumpukan[i].nama.equals(kodeBarang)) {
+                return tumpukan[i];
+            }
+        }
+        return null;
+    }
 }
