@@ -27,31 +27,39 @@ public class QueueMain07 {
         do {
             menu();
             pilih = sc.nextInt();
-            switch (pilih) {
-                case 1:
-                    System.out.print("Masukkan data baru : ");
-                    int dataMasuk = sc.nextInt(); Q. Enqueue (dataMasuk);
-                    break;
-
-                case 2:
-                    int dataKeluar = Q. Dequeue();
-                    if (dataKeluar != 0) {
-                        System.out.println("Data yang dikeluarka : " + dataKeluar); 
+            try {
+                switch (pilih) {
+                    case 1:
+                        System.out.print("Masukkan data baru : ");
+                        int dataMasuk = sc.nextInt(); 
+                        Q.Enqueue(dataMasuk);
                         break;
-                    }
-
-                case 3:
-                    Q.print();
-                    break;
-
-                case 4:
-                    Q.peek();
-                    break;
-
-                case 5:
-                    Q.clear();
+    
+                    case 2:
+                        int dataKeluar = Q.Dequeue();
+                            System.out.println("Data yang dikeluarka : " + dataKeluar); 
+                            break;
+                        
+    
+                    case 3:
+                        Q.print();
+                        break;
+    
+                    case 4:
+                        Q.peek();
+                        break;
+    
+                    case 5:
+                        Q.clear();
+                        break;
+                } 
+    
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                    System.out.println("Program Dihentikan.");
                     break;
             }
-        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5 );
+            
+        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5 );   
     }
 }

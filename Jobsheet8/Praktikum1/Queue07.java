@@ -62,9 +62,9 @@ public class Queue07 {
         }
     }
 
-    public void Enqueue (int dt) {
+    public void Enqueue (int dt) throws Exception {
         if (IsFull()) {
-            System.out.println("Queue sudah penuh");
+            throw new Exception("Queue sudah penuh! Program Terhenti.");
         } else {
             if (isEmpty()) {
                 fornt= rear = 0;
@@ -80,10 +80,10 @@ public class Queue07 {
         }
     }
 
-    public int Dequeue() {
+    public int Dequeue() throws Exception {
         int dt = 0;
         if (isEmpty()) {
-            System.out.println("Queue masih kosong");
+            throw new Exception("Queue masih kosong! Program Terhenti.");
         } else {
             dt = data [fornt];
             size--;
