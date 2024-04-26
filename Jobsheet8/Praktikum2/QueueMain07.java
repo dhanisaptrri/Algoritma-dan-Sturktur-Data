@@ -39,7 +39,8 @@ public class QueueMain07 {
                         String norek = sc.nextLine();
                         System.out.print("Nama          : ");
                         String nama= sc.nextLine();
-                        System.out.print("Alamat        : "); String alamat = sc.nextLine();
+                        System.out.print("Alamat        : "); 
+                        String alamat = sc.nextLine();
                         System.out.print("Umur          : ");
                         int umur = sc.nextInt();
                         System.out.print("Saldo         : ");
