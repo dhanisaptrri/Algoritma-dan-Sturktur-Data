@@ -14,7 +14,7 @@ public class Queue07 {
         fornt = rear = -1;
     }
 
-    public boolean IsEnoty() {
+    public boolean isEmpty() {
         if (size == 0) {
             return true;
         } else {
@@ -31,7 +31,7 @@ public class Queue07 {
     }
 
     public void peek() {
-        if (!IsEmpty()) {
+        if (!isEmpty()) {
             System.out.println("Elemen terdepan : " + data[fornt]);
         } else {
             System.out.println("Queue masih kosong");
@@ -39,7 +39,7 @@ public class Queue07 {
     }
     
     public void print() {
-        if (!IsEmpty()) {
+        if (!isEmpty()) {
             System.out.println("Queue masih kosong");
         } else {
             int i = fornt;
@@ -53,7 +53,7 @@ public class Queue07 {
     }
 
     public void clear () {
-        if (!IsEmpty()) {
+        if (!isEmpty()) {
             fornt = rear = -1;
             size = 0;
             System.out.println("Queue berhasil dikosongkan");
@@ -66,7 +66,7 @@ public class Queue07 {
         if (IsFull()) {
             System.out.println("Queue sudah penuh");
         } else {
-            if (IsEmpty()) {
+            if (isEmpty()) {
                 fornt= rear = 0;
             } else {
                 if (rear == max - 1) {
@@ -82,12 +82,12 @@ public class Queue07 {
 
     public int Dequeue() {
         int dt = 0;
-        if (IsEmpty()) {
+        if (isEmpty()) {
             System.out.println("Queue masih kosong");
         } else {
             dt = data [fornt];
             size--;
-            if (IsEmpty()) { fornt = rear = -1;
+            if (isEmpty()) { fornt = rear = -1;
             } else {
                 if (fornt == max - 1) {
                     fornt = 0;
