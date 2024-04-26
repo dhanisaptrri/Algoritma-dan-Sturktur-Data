@@ -101,5 +101,13 @@ public class Queue07 {
             System.out.println("Jumlah elemen = " + size);
         }
     }
+
+    public Nasabah07 peekRear() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Queue underflow! Program stopped.");
+        } else {
+            return data[rear];
+        }
+    }
     
 }
