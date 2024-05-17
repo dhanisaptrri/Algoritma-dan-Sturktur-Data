@@ -1,3 +1,5 @@
+import java.security.spec.ECFieldF2m;
+
 public class DoubleLinkedList {
 
     Node head;
@@ -139,5 +141,34 @@ public class DoubleLinkedList {
             }
             size--;
         }
+    }
+
+    public int getFirst() throws Exception {
+        if (isEmpty()) {
+            throw new Exception ("Linked List kosong");
+        }
+        return head.data;
+    }
+
+    public int getLast() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Linked List kosng");
+        }
+        Node tmp = head;
+        while (tmp.next != null) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
+
+    public int get(int index) throws Exception {
+        if (isEmpty() || index >= size) {
+            throw new Exception("Nilai indeks di luar batas.");
+        }
+        Node tmp = head;
+        for (int i = 1; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
     }
 }
