@@ -1,36 +1,32 @@
-package Graph07;
-
 public class Graph07 {
 
     int vertex;
-    DoubleLInkedList07 list[];
+    DoubleLinkedList07[] list;
 
     public Graph07(int v) {
         vertex = v;
-        list = new DoubleLinkedList02[v];
-        for (int i = 0; i < v; i++) {
-            list[i] = new DoubleLinkedList02();
+        list = new DoubleLinkedList07[v];
+        
+        for (int i = 0; 1 < v; i++) {  
+            list[i] = new DoubleLinkedList07();
         }
     }
 
-    public void addEdgeDirected(int asal, int tujuan, int jarak){
+    public void addEdge(int asal, int tujuan, int jarak) {
         list[asal].addFirst(tujuan, jarak);
+
     }
 
-    public void addEdgeUndirected(int asal, int tujuan, int jarak){
-        list[tujuan].addFirst(asal, jarak);
-    }
-
-    public void degreeDirected(int asal) throws Exception {
+    public void degree(int asal) throws Exception {
         int k, totalIn = 0, totalOut = 0;
         for (int i = 0; i < vertex; i++) {
-            // inDegree
-            for (int j = 0; j < list[i].size; j++) {
+
+            for (int j = 0; j < list[i].size(); j++) {
                 if (list[i].get(j) == asal) {
                     ++totalIn;
                 }
             }
-            // outDegree
+
             for (k = 0; k < list[asal].size(); k++) {
                 list[asal].get(k);
             }
@@ -41,11 +37,7 @@ public class Graph07 {
         System.out.println("Degree dari Gedung " + (char) ('A' + asal) + ": " + (totalIn + totalOut));
     }
 
-    public void degreeUndirected(int asal) {
-        System.out.println("Degree dari Gedung " + (char) ('A' + asal) + ": " + list[asal].size());
-    }
-
-    public void removeEdgeDirected(int asal, int tujuan) throws Exception {
+    public void removeEdge(int asal, int tujuan) throws Exception {
         for (int i = 0; i < vertex; i++) {
             if (i == tujuan) {
                 list[asal].remove(tujuan);
@@ -53,7 +45,7 @@ public class Graph07 {
         }
     }
 
-    public void removeAllEdges(){
+    public void removeAllEdges() {
         for (int i = 0; i < vertex; i++) {
             list[i].clear();
         }
@@ -64,8 +56,8 @@ public class Graph07 {
         for (int i = 0; i < vertex; i++) {
             if (list[i].size() > 0) {
                 System.out.println("Gedung " + (char) ('A' + i) + " terhubung dengan ");
-                for (int j = 0; j < list.length; j++) {
-                    System.out.print((char) ('A' + list[i].get(j)) + " (" + list[i].getJarak(j) + " m), ");
+                for (int j = 0; j < list[i].size(); j++) {
+                    System.out.println((char) ('A' + list[i].get(j)) + "( " + list[i].getJarak(j) + " m), ");
                 }
                 System.out.println("");
             }

@@ -1,13 +1,13 @@
-package Graph07;
-
-import org.w3c.dom.Node;
-
-public class DoubleLInkedList07 {
+public class DoubleLinkedList07 {
 
     Node07 head;
-    Node07 next;
     int size;
-
+    
+    public DoubleLinkedList07() {
+        head = null;
+        size = 0;
+    }
+    
     public boolean isEmpty() {
         return head == null;
     }
@@ -16,16 +16,16 @@ public class DoubleLInkedList07 {
         if (isEmpty()) {
             head = new Node07(null, item, jarak, null);
         } else {
-            Node07 newNode = new Node07(null, item, jarak, head);
-            head.prev = newNode;
-            head = newNode;
+            Node07 newNode07 = new Node07(null, item, jarak, head);
+            head.prev = newNode07;
+            head = newNode07;
         }
         size++;
     }
-
-    public int getJarak (int index) throws Exception {
+        
+    public int getJarak(int index) throws Exception {
         if (isEmpty() || index >= size) {
-            throw new Exception ("Nilai indeks di luar batas");
+            throw new Exception("Nilai indeks di luar batas");
         }
         Node07 tmp = head;
         for (int i = 0; i < index; i++) {
@@ -33,8 +33,8 @@ public class DoubleLInkedList07 {
         }
         return tmp.jarak;
     }
-
-    public void remove (int index) {
+    
+    public void remove(int index) {
         Node07 current = head;
         while (current != null) {
             if (current.data == index) {
@@ -50,6 +50,26 @@ public class DoubleLInkedList07 {
             }
             current = current.next;
         }
+        size--;
     }
-    
+        
+    public void clear() {
+        head = null;
+        size = 0;
+    }
+        
+    public int size() {
+        return size;
+    }
+        
+    public int get(int index) throws Exception {
+        if (isEmpty() || index >= size) {
+            throw new Exception("Nilai indeks di luar batas");
+        }
+        Node07 tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
 }
