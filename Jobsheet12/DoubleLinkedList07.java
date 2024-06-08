@@ -46,11 +46,11 @@ public class DoubleLinkedList07 {
                 if (current.next != null) {
                     current.next.prev = current.prev;
                 }
+                size--;
                 break;
             }
             current = current.next;
         }
-        size--;
     }
         
     public void clear() {
