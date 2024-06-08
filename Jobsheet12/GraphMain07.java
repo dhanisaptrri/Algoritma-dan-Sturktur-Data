@@ -13,5 +13,6 @@ public class GraphMain07 {
         gedung.printGraph();
         gedung.removeEdge(1, 3);
         gedung.printGraph();
+        gedung.jalur(1, 4);
     }
 }

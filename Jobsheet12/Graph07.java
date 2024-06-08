@@ -59,4 +59,14 @@ public class Graph07 {
         }
         System.out.println("");
     }
+
+    public void jalur(int asal, int tujuan) throws Exception {
+
+        for (int i = 0; i < list[asal].size(); i++) {
+            if (list[asal].get(i) == tujuan) {
+                System.out.println("Gedung " + (char)('A' + asal) + " dan Gedung " + (char)('A' + tujuan));
+            }
+        }
+        System.out.println("Gedung " + (char)('A' + asal) + " Tidak Bertetangga dengan " + (char)('A' + tujuan));
+    }
 }
