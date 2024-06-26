@@ -59,6 +59,13 @@ public class main07 {
                 // Panggil method dataPeminjaman
                 transaksi.dataPeminjaman(namaPeminjam, noTNKB, lamaPinjam, isMember);
                 break;
+
+                case 3:
+
+                transaksi.showPreviousTransactions();
+                transaksi.showTotalIncome();
+
+                break;
             }
         }
     }
